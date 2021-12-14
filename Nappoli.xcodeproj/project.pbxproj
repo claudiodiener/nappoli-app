@@ -10,6 +10,7 @@
 		7D27397F2768BD1A00A4ED8C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7D27397E2768BD1A00A4ED8C /* .gitignore */; };
 		7D2739812768BE8400A4ED8C /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 7D2739802768BE8400A4ED8C /* .gitattributes */; };
 		7D2739832768C00C00A4ED8C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7D2739822768C00C00A4ED8C /* README.md */; };
+		7D2739872768C9E000A4ED8C /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2739862768C9E000A4ED8C /* FavoritesView.swift */; };
 		7D69A6BD2764CC76003FAA92 /* NappoliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D69A6BC2764CC76003FAA92 /* NappoliApp.swift */; };
 		7D69A6C12764CC78003FAA92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D69A6C02764CC78003FAA92 /* Assets.xcassets */; };
 		7D69A6C42764CC78003FAA92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D69A6C32764CC78003FAA92 /* Preview Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		7D27397E2768BD1A00A4ED8C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7D2739802768BE8400A4ED8C /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		7D2739822768C00C00A4ED8C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7D2739862768C9E000A4ED8C /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		7D69A6B92764CC76003FAA92 /* Nappoli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nappoli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D69A6BC2764CC76003FAA92 /* NappoliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NappoliApp.swift; sourceTree = "<group>"; };
 		7D69A6C02764CC78003FAA92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				7D69A6D6276531DC003FAA92 /* PlacesView.swift */,
 				7D69A6D427652A11003FAA92 /* DescriptionView.swift */,
 				7D69A6DC27653A4E003FAA92 /* MapLocation.swift */,
+				7D2739862768C9E000A4ED8C /* FavoritesView.swift */,
 				7D69A70027668F0E003FAA92 /* ViewControllerResolver.swift */,
 				7D69A70227668F3E003FAA92 /* SearchBar.swift */,
 				7D69A6C02764CC78003FAA92 /* Assets.xcassets */,
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2739872768C9E000A4ED8C /* FavoritesView.swift in Sources */,
 				7D69A6DD27653A4E003FAA92 /* MapLocation.swift in Sources */,
 				7D69A6D7276531DC003FAA92 /* PlacesView.swift in Sources */,
 				7D69A6CB2764CD73003FAA92 /* TabBarView.swift in Sources */,

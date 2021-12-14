@@ -21,7 +21,7 @@ struct TabBarView: View {
                     Image(systemName: "mappin.and.ellipse")
                     Text("Places")
                 })
-            Text("FavoritesView")
+            FavoriteView()
                 .tabItem({
                     Image(systemName: "heart.fill")
                     Text("Favorites")
