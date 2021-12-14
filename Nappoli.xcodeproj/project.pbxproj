@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D27397F2768BD1A00A4ED8C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7D27397E2768BD1A00A4ED8C /* .gitignore */; };
 		7D2739812768BE8400A4ED8C /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 7D2739802768BE8400A4ED8C /* .gitattributes */; };
+		7D2739832768C00C00A4ED8C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7D2739822768C00C00A4ED8C /* README.md */; };
 		7D69A6BD2764CC76003FAA92 /* NappoliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D69A6BC2764CC76003FAA92 /* NappoliApp.swift */; };
 		7D69A6C12764CC78003FAA92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D69A6C02764CC78003FAA92 /* Assets.xcassets */; };
 		7D69A6C42764CC78003FAA92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D69A6C32764CC78003FAA92 /* Preview Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		7D27397E2768BD1A00A4ED8C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7D2739802768BE8400A4ED8C /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		7D2739822768C00C00A4ED8C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7D69A6B92764CC76003FAA92 /* Nappoli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nappoli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D69A6BC2764CC76003FAA92 /* NappoliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NappoliApp.swift; sourceTree = "<group>"; };
 		7D69A6C02764CC78003FAA92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				7D27397E2768BD1A00A4ED8C /* .gitignore */,
 				7D2739802768BE8400A4ED8C /* .gitattributes */,
+				7D2739822768C00C00A4ED8C /* README.md */,
 				7D69A6BB2764CC76003FAA92 /* Nappoli */,
 				7D69A6BA2764CC76003FAA92 /* Products */,
 			);
@@ -154,6 +157,7 @@
 			files = (
 				7D69A6C42764CC78003FAA92 /* Preview Assets.xcassets in Resources */,
 				7D27397F2768BD1A00A4ED8C /* .gitignore in Resources */,
+				7D2739832768C00C00A4ED8C /* README.md in Resources */,
 				7D69A6C12764CC78003FAA92 /* Assets.xcassets in Resources */,
 				7D2739812768BE8400A4ED8C /* .gitattributes in Resources */,
 			);
