@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct CardPlaces: View {
-    
-    @State var isLiked = false
-    
+    @State var isFavorite = false
     var body: some View {
         VStack (spacing: 0) {
             ZStack (alignment: .bottom) {
@@ -26,9 +24,9 @@ struct CardPlaces: View {
                         .shadow(color: .primary, radius: 5)
                     Spacer()
                     Button(action: {
-                        self.isLiked.toggle()
+                        self.isFavorite.toggle()
                     }) {
-                        Image(systemName: isLiked ? "heart.fill" : "heart.circle.fill")
+                        Image(systemName: isFavorite ? "heart.circle" : "heart.circle.fill")
                             .resizable()
                             .foregroundColor(.white)
                             .frame(width: 25, height: 25)

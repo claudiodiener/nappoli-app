@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DescriptionView: View {
+    @State var isFavorite = false
     var body: some View {
             ScrollView() {
                 VStack (alignment: .leading) {
@@ -19,8 +20,10 @@ struct DescriptionView: View {
                         Image("RoyalPalaceDescription")
                         HStack {
                             Spacer ()
-                            Button(action: {}) {
-                                Image(systemName: "heart.circle.fill")
+                            Button(action: {
+                                self.isFavorite.toggle()
+                            }) {
+                                Image(systemName: isFavorite ? "heart.circle" : "heart.circle.fill")
                                     .resizable()
                                     .foregroundColor(.white)
                                     .frame(width: 25, height: 25)
