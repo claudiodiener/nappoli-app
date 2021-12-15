@@ -17,7 +17,7 @@ struct CardPlaces: View {
     var body: some View {
         VStack (spacing: 0) {
             ZStack (alignment: .bottom) {
-                Image("RoyalPalacePlaces")
+                Image(self.place.imageCardName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                 HStack {
@@ -28,15 +28,6 @@ struct CardPlaces: View {
                         .foregroundColor(.white)
                         .shadow(color: .primary, radius: 5)
                     Spacer()
-                    Button(action: {
-                        isFavorite.toggle()
-                    }) {
-                        Image(systemName: place.isFavorite ? "heart.circle" : "heart.circle.fill")
-                            .resizable()
-                            .foregroundColor(.white)
-                            .frame(width: 25, height: 25)
-                            .shadow(color: .primary, radius: 5)
-                    }
                 }
                 .padding()
             }
@@ -46,21 +37,21 @@ struct CardPlaces: View {
                     HStack {
                         Image(systemName: "calendar")
                             .foregroundColor(.black)
-                        Text("Mon Tue Thu Fri Sat Sun")
+                        Text(self.place.openWeek)
                             .font(.system(size:11))
                             .bold()
                             .foregroundColor(.black)
                         Spacer()
                         Image(systemName: "clock.fill")
                             .foregroundColor(.black)
-                        Text("9 AM - 8 PM")
+                        Text(self.place.openHours)
                             .font(.system(size:11))
                             .bold()
                             .foregroundColor(.black)
                     }
                     .padding()
                     HStack {
-                        Text("€ 6,00")
+                        Text(self.place.price)
                             .font(.system(size: 25))
                             .bold()
                             .foregroundColor(.green)

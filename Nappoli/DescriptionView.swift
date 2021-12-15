@@ -8,20 +8,25 @@
 import SwiftUI
 
 struct DescriptionView: View {
-    @State var isFavorite = false
+    var place: Place
+    @State var isFavorite: Bool
+    init(place: Place) {
+        self.place = place
+        self.isFavorite = place.isFavorite
+    }
     var body: some View {
             ScrollView() {
                 VStack (alignment: .leading) {
-                    Text("Royal Palace")
+                    Text(self.place.name)
                         .font(.largeTitle)
                         .bold()
                         .padding()
                     ZStack (alignment: .bottom){
-                        Image("RoyalPalaceDescription")
+                        Image(self.place.imageDescriptionName)
                         HStack {
                             Spacer ()
                             Button(action: {
-                                self.isFavorite.toggle()
+                                isFavorite.toggle()
                             }) {
                                 Image(systemName: isFavorite ? "heart.circle" : "heart.circle.fill")
                                     .resizable()
@@ -36,7 +41,7 @@ struct DescriptionView: View {
                         .font(.title)
                         .bold()
                         .padding()
-                    Text("The Royal Palace of Naples (Italian: Palazzo Reale di Napoli, Neapolitan: Palazzo Riale ‘e Napule) is a palace, museum, and historical tourist destination located in central Naples, southern Italy. It was one of the four residences near Naples used by the House of Bourbon during their rule of the Kingdom of Naples (1735–1816) and later the Kingdom of the Two Sicilies (1816-1861). The others were the palaces of Caserta, Capodimonte overlooking Naples and Portici on the slopes of Vesuvius.")
+                    Text(self.place.description)
                         .padding([.trailing, .leading])
                     Text("Open")
                         .font(.title)
@@ -46,32 +51,37 @@ struct DescriptionView: View {
                         VStack (alignment: .leading) {
                             HStack {
                                 Image(systemName: "calendar")
+                                    .foregroundColor(.gray)
                                 Text("Monday")
                             }
                             HStack {
                                 Image(systemName: "calendar")
+                                    .foregroundColor(.gray)
                                 Text("Tuesday")
                             }
                             HStack {
                                 Image(systemName: "calendar")
-                                    .foregroundColor(.red)
+                                    .foregroundColor(.gray)
                                 Text("Wednesday")
-                                    .foregroundColor(.red)
                             }
                             HStack {
                                 Image(systemName: "calendar")
+                                    .foregroundColor(.gray)
                                 Text("Thursday")
                             }
                             HStack {
                                 Image(systemName: "calendar")
+                                    .foregroundColor(.gray)
                                 Text("Friday")
                             }
                             HStack {
                                 Image(systemName: "calendar")
+                                    .foregroundColor(.gray)
                                 Text("Saturday")
                             }
                             HStack {
                                 Image(systemName: "calendar")
+                                    .foregroundColor(.gray)
                                 Text("Sunday")
                             }
                         }
@@ -79,33 +89,38 @@ struct DescriptionView: View {
                         VStack (alignment: .leading) {
                             HStack {
                                 Image(systemName: "clock.fill")
-                                Text("9 AM - 8 PM")
+                                    .foregroundColor(.gray)
+                                Text(self.place.mondayHours)
                             }
                             HStack {
                                 Image(systemName: "clock.fill")
-                                Text("9 AM - 8 PM")
+                                    .foregroundColor(.gray)
+                                Text(self.place.tuesdayHours)
                             }
                             HStack {
                                 Image(systemName: "clock.fill")
-                                    .foregroundColor(.red)
-                                Text("Closed")
-                                    .foregroundColor(.red)
+                                    .foregroundColor(.gray)
+                                Text(self.place.wednesdayHours)
                             }
                             HStack {
                                 Image(systemName: "clock.fill")
-                                Text("9 AM - 8 PM")
+                                    .foregroundColor(.gray)
+                                Text(self.place.thursdayHours)
                             }
                             HStack {
                                 Image(systemName: "clock.fill")
-                                Text("9 AM - 8 PM")
+                                    .foregroundColor(.gray)
+                                Text(self.place.fridayhours)
                             }
                             HStack {
                                 Image(systemName: "clock.fill")
-                                Text("9 AM - 8 PM")
+                                    .foregroundColor(.gray)
+                                Text(self.place.saturdayHours)
                             }
                             HStack {
                                 Image(systemName: "clock.fill")
-                                Text("9 AM - 8 PM")
+                                    .foregroundColor(.gray)
+                                Text(self.place.sundayHours)
                             }
                         }
                     }
@@ -114,7 +129,7 @@ struct DescriptionView: View {
                         .font(.title)
                         .bold()
                         .padding()
-                    Text("€ 6,00")
+                    Text(self.place.price)
                         .font(.system(size: 25))
                         .bold()
                         .foregroundColor(.green)
@@ -132,6 +147,6 @@ struct DescriptionView: View {
 
 struct DescriptionView_Previews: PreviewProvider {
     static var previews: some View {
-        DescriptionView()
+        DescriptionView(place: ModelData().places[0])
     }
 }

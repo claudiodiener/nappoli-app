@@ -21,7 +21,7 @@ struct MapView: View {
                         Button(action:{showingSheet.toggle()}) {
                             CardPlaces(place: ModelData().places[0])}
                         .sheet(isPresented: $showingSheet) {
-                            DescriptionView()
+                            DescriptionView(place: ModelData().places[0])
                         }
                     }
                     .padding()
