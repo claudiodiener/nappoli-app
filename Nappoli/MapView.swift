@@ -19,22 +19,7 @@ struct MapView: View {
                 ScrollView(.horizontal) {
                     HStack {
                         Button(action:{showingSheet.toggle()}) {
-                            CardPlaces()}
-                        .sheet(isPresented: $showingSheet) {
-                            DescriptionView()
-                        }
-                        Button(action:{showingSheet.toggle()}) {
-                            CardPlaces()}
-                        .sheet(isPresented: $showingSheet) {
-                            DescriptionView()
-                        }
-                        Button(action:{showingSheet.toggle()}) {
-                            CardPlaces()}
-                        .sheet(isPresented: $showingSheet) {
-                            DescriptionView()
-                        }
-                        Button(action:{showingSheet.toggle()}) {
-                            CardPlaces()}
+                            CardPlaces(place: ModelData().places[0])}
                         .sheet(isPresented: $showingSheet) {
                             DescriptionView()
                         }
