@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct CardPlaces: View {
-    @State var isFavorite = false
+    var place: Place
+    @State var isFavorite: Bool
+    init(place: Place) {
+        self.place = place
+        self.isFavorite = place.isFavorite
+    }
     var body: some View {
         VStack (spacing: 0) {
             ZStack (alignment: .bottom) {
@@ -16,7 +21,7 @@ struct CardPlaces: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                 HStack {
-                    Text("Royal Palace")
+                    Text(self.place.name)
                         .font(.system(size:25))
                         .fontWeight(.heavy)
                         .bold()
@@ -24,9 +29,9 @@ struct CardPlaces: View {
                         .shadow(color: .primary, radius: 5)
                     Spacer()
                     Button(action: {
-                        self.isFavorite.toggle()
+                        isFavorite.toggle()
                     }) {
-                        Image(systemName: isFavorite ? "heart.circle" : "heart.circle.fill")
+                        Image(systemName: place.isFavorite ? "heart.circle" : "heart.circle.fill")
                             .resizable()
                             .foregroundColor(.white)
                             .frame(width: 25, height: 25)
@@ -79,6 +84,6 @@ struct CardPlaces: View {
 
 struct CardPlaces_Previews: PreviewProvider {
     static var previews: some View {
-        CardPlaces()
+        CardPlaces(place: ModelData().places[0])
     }
 }
