@@ -8,19 +8,16 @@
 import SwiftUI
 
 @available(iOS 15.0, *)
-struct PlacesView: View {
-    @State private var showingSheet = false
+struct PlacesView: View{
+    //@StateObject var model = ModelData()
+    //@State private var showingSheet = false
+    //@State var placeID = 0
     @ObservedObject var searchBar: SearchBar = SearchBar()
     var body: some View {
         NavigationView {
             ScrollView() {
                 VStack {
-                    Button(action:{showingSheet.toggle()}) {
-                        CardPlaces(place: ModelData().places[0])}
-                    .sheet(isPresented: $showingSheet) {
-                        DescriptionView()
-                    }
-                    .padding()
+                    CardsSheet()
                 }
             }
             .add(self.searchBar)

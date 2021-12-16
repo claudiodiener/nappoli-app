@@ -10,6 +10,7 @@ import MapKit
 
 @available(iOS 15.0, *)
 struct MapView: View {
+    @StateObject var model = ModelData()
     @State private var showingSheet = false
     var body: some View {
         ZStack {
@@ -18,13 +19,8 @@ struct MapView: View {
                 Spacer()
                 ScrollView(.horizontal) {
                     HStack {
-                        Button(action:{showingSheet.toggle()}) {
-                            CardPlaces(place: ModelData().places[0])}
-                        .sheet(isPresented: $showingSheet) {
-                            DescriptionView(place: ModelData().places[0])
-                        }
+                        CardsSheet()
                     }
-                    .padding()
                 }
             }
         }
