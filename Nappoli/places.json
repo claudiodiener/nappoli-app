@@ -20,5 +20,49 @@
             "latitude": 40.836167,
             "longitude": 14.249557
         }
+    },
+    {
+        "id": "1",
+        "name": "Hamzuccio's house",
+        "imageCardName": "RoyalPalacePlaces",
+        "isFavorite": false,
+        "openWeek": "Mon Tue Thu Fri Sat Sun",
+        "openHours": "9 AM - 8 PM",
+        "price": "€ 6,00",
+        "imageDescriptionName": "RoyalPalaceDescription",
+        "description": "The Royal Palace of Naples (Italian: Palazzo Reale di Napoli, Neapolitan: Palazzo Riale ‘e Napule) is a palace, museum, and historical tourist destination located in central Naples, southern Italy. It was one of the four residences near Naples used by the House of Bourbon during their rule of the Kingdom of Naples (1735–1816) and later the Kingdom of the Two Sicilies (1816-1861). The others were the palaces of Caserta, Capodimonte overlooking Naples and Portici on the slopes of Vesuvius.",
+        "mondayHours": "9 AM - 8 PM",
+        "tuesdayHours": "9 AM - 8 PM",
+        "wednesdayHours": "Closed",
+        "thursdayHours": "9 AM - 8 PM",
+        "fridayhours": "9 AM - 8 PM",
+        "saturdayHours": "9 AM - 8 PM",
+        "sundayHours": "9 AM - 8 PM",
+        "coordinates": {
+            "latitude": 40.836167,
+            "longitude": 14.249557
+        }
+    },
+    {
+        "id": "2",
+        "name": "bgbebderjfbve",
+        "imageCardName": "RoyalPalacePlaces",
+        "isFavorite": false,
+        "openWeek": "Mon Tue Thu Fri Sat Sun",
+        "openHours": "9 AM - 8 PM",
+        "price": "€ 6,00",
+        "imageDescriptionName": "RoyalPalaceDescription",
+        "description": "The Royal Palace of Naples (Italian: Palazzo Reale di Napoli, Neapolitan: Palazzo Riale ‘e Napule) is a palace, museum, and historical tourist destination located in central Naples, southern Italy. It was one of the four residences near Naples used by the House of Bourbon during their rule of the Kingdom of Naples (1735–1816) and later the Kingdom of the Two Sicilies (1816-1861). The others were the palaces of Caserta, Capodimonte overlooking Naples and Portici on the slopes of Vesuvius.",
+        "mondayHours": "9 AM - 8 PM",
+        "tuesdayHours": "9 AM - 8 PM",
+        "wednesdayHours": "Closed",
+        "thursdayHours": "9 AM - 8 PM",
+        "fridayhours": "9 AM - 8 PM",
+        "saturdayHours": "9 AM - 8 PM",
+        "sundayHours": "9 AM - 8 PM",
+        "coordinates": {
+            "latitude": 40.836167,
+            "longitude": 14.249557
+        }
     }
 ]
