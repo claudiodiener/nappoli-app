@@ -28,6 +28,15 @@ struct CardPlaces: View {
                         .foregroundColor(.white)
                         .shadow(color: .primary, radius: 5)
                     Spacer()
+                    Button(action: {
+                        isFavorite.toggle()
+                    }) {
+                        Image(systemName: isFavorite ? "heart.circle" : "heart.circle.fill")
+                            .resizable()
+                            .foregroundColor(.white)
+                            .frame(width: 25, height: 25)
+                            .shadow(color: .primary, radius: 5)
+                    }
                 }
                 .padding()
             }

@@ -10,6 +10,7 @@
 		7D18FF3027692C4B00901941 /* PlacesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D18FF2F27692C4B00901941 /* PlacesData.swift */; };
 		7D18FF32276942C200901941 /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D18FF31276942C200901941 /* places.json */; };
 		7D18FF342769440800901941 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D18FF332769440800901941 /* ModelData.swift */; };
+		7D18FF6C276A941300901941 /* CardsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D18FF6B276A941300901941 /* CardsSheet.swift */; };
 		7D27397F2768BD1A00A4ED8C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7D27397E2768BD1A00A4ED8C /* .gitignore */; };
 		7D2739812768BE8400A4ED8C /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 7D2739802768BE8400A4ED8C /* .gitattributes */; };
 		7D2739832768C00C00A4ED8C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7D2739822768C00C00A4ED8C /* README.md */; };
@@ -31,6 +32,7 @@
 		7D18FF2F27692C4B00901941 /* PlacesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesData.swift; sourceTree = "<group>"; };
 		7D18FF31276942C200901941 /* places.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = places.json; sourceTree = "<group>"; };
 		7D18FF332769440800901941 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		7D18FF6B276A941300901941 /* CardsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsSheet.swift; sourceTree = "<group>"; };
 		7D27397E2768BD1A00A4ED8C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7D2739802768BE8400A4ED8C /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		7D2739822768C00C00A4ED8C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				7D69A6CA2764CD73003FAA92 /* TabBarView.swift */,
 				7D69A6CC2764CDEE003FAA92 /* CardPlaces.swift */,
 				7D69A6D227651C3F003FAA92 /* MapView.swift */,
+				7D18FF6B276A941300901941 /* CardsSheet.swift */,
 				7D69A6D6276531DC003FAA92 /* PlacesView.swift */,
 				7D69A6D427652A11003FAA92 /* DescriptionView.swift */,
 				7D18FF2F27692C4B00901941 /* PlacesData.swift */,
@@ -186,6 +189,7 @@
 				7D2739872768C9E000A4ED8C /* FavoritesView.swift in Sources */,
 				7D69A6DD27653A4E003FAA92 /* MapLocation.swift in Sources */,
 				7D69A6D7276531DC003FAA92 /* PlacesView.swift in Sources */,
+				7D18FF6C276A941300901941 /* CardsSheet.swift in Sources */,
 				7D69A6CB2764CD73003FAA92 /* TabBarView.swift in Sources */,
 				7D69A6BD2764CC76003FAA92 /* NappoliApp.swift in Sources */,
 				7D18FF342769440800901941 /* ModelData.swift in Sources */,
