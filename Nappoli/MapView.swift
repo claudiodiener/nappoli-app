@@ -12,9 +12,14 @@ import MapKit
 struct MapView: View {
     @StateObject var model = ModelData()
     @State private var showingSheet = false
+    var region =  MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 40.836_167, longitude: 14.249_557),
+        span: MKCoordinateSpan(latitudeDelta: 0.150, longitudeDelta: 0.150)
+    )
+
     var body: some View {
         ZStack {
-            MapLocation()
+            MapLocation(region: self.region, places: ModelData().places)
             VStack {
                 Spacer()
                 ScrollView(.horizontal) {

@@ -9,9 +9,6 @@ import SwiftUI
 
 @available(iOS 15.0, *)
 struct PlacesView: View{
-    //@StateObject var model = ModelData()
-    //@State private var showingSheet = false
-    //@State var placeID = 0
     @ObservedObject var searchBar: SearchBar = SearchBar()
     var body: some View {
         NavigationView {

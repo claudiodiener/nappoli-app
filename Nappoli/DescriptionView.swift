@@ -6,13 +6,24 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct DescriptionView: View {
     var place: Place
+    @State var region: MKCoordinateRegion
     @State var isFavorite: Bool
+    
     init(place: Place) {
         self.place = place
         self.isFavorite = place.isFavorite
+        
+        self.region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(
+                latitude: place.locationCoordinate.latitude,
+                longitude: place.locationCoordinate.longitude
+            ),
+            span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        )
     }
     var body: some View {
             ScrollView() {
@@ -138,8 +149,10 @@ struct DescriptionView: View {
                         .font(.title)
                         .bold()
                         .padding()
-                    MapLocation()
-                        .frame(width: 414, height: 200)
+                    MapLocation(
+                        region: self.region,
+                        places: [self.place]
+                    ).frame(width: 414, height: 200)
                 }
             }
     }
