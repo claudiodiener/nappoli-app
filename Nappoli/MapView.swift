@@ -14,7 +14,7 @@ struct MapView: View {
     @State private var showingSheet = false
     var region =  MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 40.836_167, longitude: 14.249_557),
-        span: MKCoordinateSpan(latitudeDelta: 0.150, longitudeDelta: 0.150)
+        span: MKCoordinateSpan(latitudeDelta: 0.160, longitudeDelta: 0.160)
     )
 
     var body: some View {

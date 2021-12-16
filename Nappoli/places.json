@@ -39,8 +39,8 @@
         "saturdayHours": "9 AM - 7 PM",
         "sundayHours": "9 AM - 2 PM",
         "coordinates": {
-            "latitude": 40.827971,
-            "longitude": 14.247854
+            "latitude": 40.838336,
+            "longitude": 14.253248
         }
     },
     {
@@ -63,6 +63,50 @@
         "coordinates": {
             "latitude": 40.799291,
             "longitude": 14.180163
+        }
+    },
+    {
+        "id": "3",
+        "name": "Egg Castle",
+        "imageCardName": "EggCastlePlaces",
+        "isFavorite": false,
+        "openWeek": "Mon Tue Wed Thu Fri Sat Sun",
+        "openHours": "Variable",
+        "price": "FREE",
+        "imageDescriptionName": "eggCastleDescription",
+        "description": "Castel dell'Ovo (in English, Egg Castle) is a seafront castle in Naples, located on the former island of Megaride, now a peninsula, on the Gulf of Naples in Italy. The castle's name comes from a legend about the Roman poet Virgil, who had a reputation in the Middle Ages as a great sorcerer and predictor of the future. In the legend, Virgil put a magical egg into the foundations to support the fortifications. It remains there along with his bones, and had this egg been broken, the castle would have been destroyed and a series of disastrous events for Naples would have followed. The castle is located between the districts of San Ferdinando and Chiaia, facing Mergellina across the sea.",
+        "mondayHours": "9 AM - 6,30 PM",
+        "tuesdayHours": "9 AM - 6,30 P",
+        "wednesdayHours": "9 AM - 6,30 PM",
+        "thursdayHours": "9 AM - 6,30 P",
+        "fridayhours": "9 AM - 6,30 P",
+        "saturdayHours": "9 AM - 6,30 P",
+        "sundayHours": "7 AM - 1 PM",
+        "coordinates": {
+            "latitude": 40.827965,
+            "longitude": 14.247850
+        }
+    },
+    {
+        "id": "4",
+        "name": "Neaples Cathedral",
+        "imageCardName": "NeaplesCathedralPlaces",
+        "isFavorite": false,
+        "openWeek": "Mon Tue Wed Thu Fri Sat Sun",
+        "openHours": "8,30 AM - 7,30 PM",
+        "price": "FREE",
+        "imageDescriptionName": "NaplesCathedralDescription",
+        "description": "The Naples Cathedral (Italian: Duomo di Napoli; Neapolitan: Viscuvato 'e Napule), or Cathedral of the Assumption of Mary (Italian: Cattedrale di Santa Maria Assunta), is a Roman Catholic cathedral, the main church of Naples, southern Italy, and the seat of the Archbishop of Naples. It is widely known as the Cattedrale di San Gennaro (Cathedral of Saint Januarius), in honour of the city's patron saint.",
+        "mondayHours": "8,30 AM - 7,30 PM",
+        "tuesdayHours": "8,30 AM - 7,30 PM",
+        "wednesdayHours": "8,30 AM - 7,30 PM",
+        "thursdayHours": "8,30 AM - 7,30 PM",
+        "fridayhours": "8,30 AM - 7,30 PM",
+        "saturdayHours": "8,30 AM - 7,30 PM",
+        "sundayHours": "8 AM - 7,30 PM",
+        "coordinates": {
+            "latitude": 40.852627,
+            "longitude": 14.259623
         }
     }
 ]
