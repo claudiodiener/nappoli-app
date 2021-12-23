@@ -10,6 +10,29 @@ import Combine
 
 final class ModelData: ObservableObject {
     @Published var places: [Place] = load("places.json")
+    
+    @Published var searchTerm = ""
+    
+    
+    /*
+    func getPlace(id: String) -> Place {
+        let index = places.firstIndex { placeArr in
+            placeArr.id == place.id
+        }
+        if let index = index {
+            return places[index]
+        }
+    }*/
+    
+    func toggleFavorite(_ place: Place) {
+        let index = places.firstIndex { placeArr in
+            placeArr.id == place.id
+        }
+        if let index = index {
+            places[index].isFavorite.toggle()
+        }
+    }
+    
 
 }
 

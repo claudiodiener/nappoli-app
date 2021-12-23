@@ -10,15 +10,27 @@ import SwiftUI
 @available(iOS 15.0, *)
 struct PlacesView: View{
     @ObservedObject var searchBar: SearchBar = SearchBar()
+    @EnvironmentObject var model: ModelData
+    
+    var filtered: [Place] {
+        return model.searchTerm.isEmpty ? model.places :  model.places.filter { $0.name.contains(model.searchTerm) }
+    }
+    
     var body: some View {
+        
         NavigationView {
             ScrollView() {
                 VStack {
-                    CardsSheet()
+                    ForEach(filtered, id: \.id) { place in
+                        CardPlaces(place: place)
+                            .padding()
+                    }
                 }
             }
-            .add(self.searchBar)
+            .searchable(text: $model.searchTerm)
             .navigationTitle("Places")
+            //            .add(self.searchBar)
+            
         }
     }
 }

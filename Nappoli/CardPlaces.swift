@@ -8,20 +8,27 @@
 import SwiftUI
 
 struct CardPlaces: View {
+    @EnvironmentObject var model: ModelData
+    @State private var isShowingSheet = false
     var place: Place
-    @State var isFavorite: Bool
-    init(place: Place) {
-        self.place = place
-        self.isFavorite = place.isFavorite
+    
+    var index: Int {
+        return model.places.firstIndex { placeArr in
+            placeArr.id == place.id
+        }!
     }
+
     var body: some View {
+        
+        let isFavorite = model.places[index].isFavorite
+        
         VStack (spacing: 0) {
             ZStack (alignment: .bottom) {
-                Image(self.place.imageCardName)
+                Image(model.places[index].imageCardName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                 HStack {
-                    Text(self.place.name)
+                    Text(model.places[index].name)
                         .font(.system(size:25))
                         .fontWeight(.heavy)
                         .bold()
@@ -29,9 +36,9 @@ struct CardPlaces: View {
                         .shadow(color: .primary, radius: 5)
                     Spacer()
                     Button(action: {
-                        isFavorite.toggle()
+                        model.toggleFavorite(place)
                     }) {
-                        Image(systemName: isFavorite ? "heart.circle" : "heart.circle.fill")
+                        Image(systemName: isFavorite ? "heart.fill" : "heart")
                             .resizable()
                             .foregroundColor(.white)
                             .frame(width: 25, height: 25)
@@ -79,11 +86,18 @@ struct CardPlaces: View {
         .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
             .shadow(radius: 5)
             .frame(width: 360, height: 200)
+        .sheet(isPresented: $isShowingSheet, content:  {
+                DescriptionView(place: place)
+            })
+        .onTapGesture {
+            isShowingSheet = true
+        }
     }
 }
 
 struct CardPlaces_Previews: PreviewProvider {
     static var previews: some View {
         CardPlaces(place: ModelData().places[0])
+            .environmentObject(ModelData())
     }
 }

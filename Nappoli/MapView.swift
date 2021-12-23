@@ -10,7 +10,7 @@ import MapKit
 
 @available(iOS 15.0, *)
 struct MapView: View {
-    @StateObject var model = ModelData()
+    @EnvironmentObject var model: ModelData
     @State private var showingSheet = false
     var region =  MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 40.836_167, longitude: 14.249_557),
@@ -19,14 +19,15 @@ struct MapView: View {
 
     var body: some View {
         ZStack {
-            MapLocation(region: self.region, places: ModelData().places)
+            MapLocation(places: model.places, region: self.region)
             VStack {
                 Spacer()
                 ScrollView(.horizontal) {
-                    HStack {
+                    HStack(spacing: -10) {
                         CardsSheet()
                     }
                 }
+                .padding(.bottom)
             }
         }
     }
@@ -36,5 +37,6 @@ struct MapView: View {
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView()
+            .environmentObject(ModelData())
     }
 }

@@ -9,13 +9,19 @@ import SwiftUI
 import MapKit
 
 struct DescriptionView: View {
+    @EnvironmentObject var model: ModelData
+    
     var place: Place
     @State var region: MKCoordinateRegion
-    @State var isFavorite: Bool
+    
+    var index: Int {
+        return model.places.firstIndex { placeArr in
+            placeArr.id == place.id
+        }!
+    }
     
     init(place: Place) {
         self.place = place
-        self.isFavorite = place.isFavorite
         
         self.region = MKCoordinateRegion(
             center: CLLocationCoordinate2D(
@@ -26,20 +32,23 @@ struct DescriptionView: View {
         )
     }
     var body: some View {
+        
+        let isFavorite = model.places[index].isFavorite
+        
             ScrollView() {
                 VStack (alignment: .leading) {
-                    Text(self.place.name)
+                    Text(place.name)
                         .font(.largeTitle)
                         .bold()
                         .padding()
                     ZStack (alignment: .bottom){
-                        Image(self.place.imageDescriptionName)
+                        Image(place.imageDescriptionName)
                         HStack {
                             Spacer ()
                             Button(action: {
-                                isFavorite.toggle()
+                                model.toggleFavorite(place)
                             }) {
-                                Image(systemName: isFavorite ? "heart.circle" : "heart.circle.fill")
+                                Image(systemName: isFavorite ? "heart.fill" : "heart")
                                     .resizable()
                                     .foregroundColor(.white)
                                     .frame(width: 25, height: 25)
@@ -52,7 +61,7 @@ struct DescriptionView: View {
                         .font(.title)
                         .bold()
                         .padding()
-                    Text(self.place.description)
+                    Text(place.description)
                         .padding([.trailing, .leading])
                     Text("Open")
                         .font(.title)
@@ -101,37 +110,37 @@ struct DescriptionView: View {
                             HStack {
                                 Image(systemName: "clock.fill")
                                     .foregroundColor(.gray)
-                                Text(self.place.mondayHours)
+                                Text(place.mondayHours)
                             }
                             HStack {
                                 Image(systemName: "clock.fill")
                                     .foregroundColor(.gray)
-                                Text(self.place.tuesdayHours)
+                                Text(place.tuesdayHours)
                             }
                             HStack {
                                 Image(systemName: "clock.fill")
                                     .foregroundColor(.gray)
-                                Text(self.place.wednesdayHours)
+                                Text(place.wednesdayHours)
                             }
                             HStack {
                                 Image(systemName: "clock.fill")
                                     .foregroundColor(.gray)
-                                Text(self.place.thursdayHours)
+                                Text(place.thursdayHours)
                             }
                             HStack {
                                 Image(systemName: "clock.fill")
                                     .foregroundColor(.gray)
-                                Text(self.place.fridayhours)
+                                Text(place.fridayhours)
                             }
                             HStack {
                                 Image(systemName: "clock.fill")
                                     .foregroundColor(.gray)
-                                Text(self.place.saturdayHours)
+                                Text(place.saturdayHours)
                             }
                             HStack {
                                 Image(systemName: "clock.fill")
                                     .foregroundColor(.gray)
-                                Text(self.place.sundayHours)
+                                Text(place.sundayHours)
                             }
                         }
                     }
@@ -140,7 +149,7 @@ struct DescriptionView: View {
                         .font(.title)
                         .bold()
                         .padding()
-                    Text(self.place.price)
+                    Text(place.price)
                         .font(.system(size: 25))
                         .bold()
                         .foregroundColor(.green)
@@ -150,8 +159,8 @@ struct DescriptionView: View {
                         .bold()
                         .padding()
                     MapLocation(
-                        region: self.region,
-                        places: [self.place]
+                        places: [place],
+                        region: self.region
                     ).frame(width: 414, height: 200)
                 }
             }
@@ -161,5 +170,6 @@ struct DescriptionView: View {
 struct DescriptionView_Previews: PreviewProvider {
     static var previews: some View {
         DescriptionView(place: ModelData().places[0])
+            .environmentObject(ModelData())
     }
 }
